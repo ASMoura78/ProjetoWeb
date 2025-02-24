@@ -4,6 +4,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
+    background-image: url('imagens/logistica.png');
     display: flex;
     justify-content: center;
     align-items: center;
