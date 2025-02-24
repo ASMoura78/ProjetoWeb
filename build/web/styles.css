@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* Estilo básico do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remover margens padrão */
+}
+
+/* Estilo para containers principais */
+.cadastro-container, .login-container, .message-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 300px; /* Aumentar largura máxima para centralizar */
+}
+
+/* Estilo para containers main */
+.main-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 1000px; /* Aumentar largura máxima para centralizar */
+}
+
+/* Estilo para cabeçalhos */
+h2 {
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px #aaa; /* Adicionar sombra ao texto */
+}
+
+/* Estilo para labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333; /* Cor mais viva para o texto */
+}
+
+/* Estilo para inputs, selects e textareas */
+input, select, textarea {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Permitir redimensionamento vertical de textareas */
+textarea {
+    resize: vertical;
+}
+
+/* Estilo para alinhar botões na horizontal */
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir quebra de linha quando necessário */
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilos dos formulários dentro do contêiner dos botões */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Estilo para botões */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 2px 2px 4px #aaa; /* Adicionar sombra aos botões */
+    display: flex; /* Permitir que os botões fiquem na horizontal */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Centraliza o botão no formulário */
+}
+
+/* Estilo para hover em botões */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para imagens dentro dos botões */
+button img {
+    width: 80px;  /* Defina o tamanho da imagem conforme necessário */
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 5px; /* Espaço entre a imagem e o texto */
+}
+
+/* Estilo para mensagens */
+.message {
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px #ccc; /* Adicionar sombra ao texto */
+}
+
+/* Estilo para mensagens de sucesso */
+.message.success {
+    color: #4CAF50;
+}
+
+/* Estilo para mensagens de erro */
+.message.error {
+    color: #FF6347;
+}
+
+/* Estilo para alinhar botões na horizontal */
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir quebra de linha quando necessário */
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
