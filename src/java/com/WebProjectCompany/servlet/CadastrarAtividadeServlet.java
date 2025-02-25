@@ -75,5 +75,3 @@ public class CadastrarAtividadeServlet extends HttpServlet {
         return "Servlet para cadastrar atividades";
     }
 }
-
-

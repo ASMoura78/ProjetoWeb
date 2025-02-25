@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     background-image: url('imagens/logistica.png');
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,8 +20,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%;
-    max-width: 300px; /* Aumentar largura máxima para centralizar */
+    width: 350px;
 }
 
 /* Estilo para containers main */
@@ -30,7 +30,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%;
+    width: 200%;
     max-width: 1000px; /* Aumentar largura máxima para centralizar */
 }
 
@@ -61,11 +61,10 @@ textarea {
     resize: vertical;
 }
 
-/* Estilo para alinhar botões na horizontal */
+/* Alinhar contêiner de botões no centro */
 .button-container {
     display: flex;
-    flex-wrap: wrap; /* Permitir quebra de linha quando necessário */
-    justify-content: center;
+    justify-content: center; /* Centralizar botões horizontalmente */
     gap: 10px; /* Espaçamento entre os botões */
 }
 
@@ -74,7 +73,6 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
     text-align: center;
 }
 
@@ -86,12 +84,8 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5px;
     box-shadow: 2px 2px 4px #aaa; /* Adicionar sombra aos botões */
-    display: flex; /* Permitir que os botões fiquem na horizontal */
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px; /* Centraliza o botão no formulário */
+    margin: 10px; /* Espaçamento entre os botões */
 }
 
 /* Estilo para hover em botões */
@@ -124,13 +118,6 @@ button img {
     color: #FF6347;
 }
 
-/* Estilo para alinhar botões na horizontal */
-.button-container {
-    display: flex;
-    flex-wrap: wrap; /* Permitir quebra de linha quando necessário */
-    justify-content: center;
-    gap: 10px; /* Espaçamento entre os botões */
-}
 
 
 

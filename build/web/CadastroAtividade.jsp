@@ -30,6 +30,22 @@
                         }
                     %>
                 </select><br><br>
+                
+                <label for="veiculo">Veículo:</label>
+                <select id="veiculo" name="veiculo" required>
+                    <option value="" disabled selected>Selecione o veículo</option>
+                    <%
+                        List<String> veiculos = (List<String>) request.getAttribute("veiculos");
+                        if (veiculos != null) {
+                            for (String veiculo : veiculos) {
+                                out.println("<option value='" + veiculo + "'>" + veiculo + "</option>");
+                            }
+                        } else {
+                            out.println("<option value='' disabled>Erro ao carregar veículos</option>");
+                        }
+                    %>
+                </select><br><br>
+
                 <label for="destino">Destino:</label>
                 <input type="text" id="destino" name="destino" required><br><br>
                 <label for="dataSaida">Data e Horário de Saída:</label>
@@ -42,8 +58,10 @@
                 <input type="number" id="quilometragemChegada" name="quilometragemChegada" required><br><br>
                 <label for="observacoes">Observações:</label>
                 <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
-                <button type="submit">Cadastrar</button>
-                <button type="button" onclick="window.location.href='main.jsp'">Voltar</button>
+                <div class="button-container">
+                    <button type="submit">Cadastrar</button>
+                    <button type="button" onclick="window.location.href='main.jsp'">Voltar</button>
+                </div>
             </form>
             <!-- Exibir mensagem de sucesso -->
             <%

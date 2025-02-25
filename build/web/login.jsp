@@ -14,10 +14,12 @@
                 <input type="text" id="username" name="username" required><br><br>
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" required><br><br>
-                <button type="submit">Entrar</button><br><br>
+                <div class="button-container">
+                    <button type="submit">Entrar</button><br><br>
+                </div>
                 <a href="#" onclick="alert('Por favor, procure o suporte de TI para recuperar sua senha')">Esqueceu a senha?</a>
             </form>
-            
+
             <!-- Exibir mensagem de sucesso ou erro -->
             <%
                 String message = (String) session.getAttribute("message");

@@ -45,8 +45,10 @@
                 <input type="datetime-local" id="dataSaida" name="dataSaida" required><br><br>
                 <label for="servicoRealizado">Serviço Realizado:</label>
                 <textarea id="servicoRealizado" name="servicoRealizado" rows="4" cols="50" required></textarea><br><br>
-                <button type="submit">Cadastrar</button>
-                <button type="button" onclick="window.location.href='main.jsp'">Voltar</button>
+                <div class="button-container">
+                    <button type="submit">Cadastrar</button>
+                    <button type="button" onclick="window.location.href = 'main.jsp'">Voltar</button>
+                </div>
             </form>
             <!-- Exibir mensagem de sucesso -->
             <%

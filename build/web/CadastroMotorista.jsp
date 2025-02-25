@@ -15,10 +15,10 @@
                 document.getElementById("cursos").value = "";
             }
 
-            window.onload = function() {
-                <% if (session.getAttribute("message") != null) { %>
-                    clearForm(); // Limpar os campos do formulário
-                <% } %>
+            window.onload = function () {
+            <% if (session.getAttribute("message") != null) { %>
+                clearForm(); // Limpar os campos do formulário
+            <% } %>
             };
         </script>
     </head>
@@ -43,10 +43,12 @@
                 </select><br><br>
                 <label for="cursos">Cursos Adicionais:</label>
                 <textarea id="cursos" name="cursos" rows="4" cols="50"></textarea><br><br>
-                <button type="submit">Cadastrar</button>
-                <button type="button" onclick="window.location.href='main.jsp'">Voltar</button>
+                <div class="button-container">
+                    <button type="submit">Cadastrar</button>
+                    <button type="button" onclick="window.location.href = 'main.jsp'">Voltar</button>
+                </div>
             </form>
-            
+
             <!-- Exibir mensagem de sucesso -->
             <%
                 String message = (String) session.getAttribute("message");

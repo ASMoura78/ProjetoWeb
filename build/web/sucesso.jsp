@@ -9,13 +9,13 @@
             window.onload = function() {
                 setTimeout(function() {
                     window.location.href = "main.jsp";
-                }, 2000); // Redireciona após 2 segundos
+                }, 2500); // Redireciona após 2 segundos
             };
         </script>
     </head>
     <body>
         <div class="message-container">
-            <h2>Sucesso</h2>
+            <h2>Seja bem vindo!</h2>
             <p class='message success'>Login efetuado com sucesso!</p>
         </div>
     </body>

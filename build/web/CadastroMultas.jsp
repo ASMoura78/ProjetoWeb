@@ -35,8 +35,10 @@
                 <input type="text" id="local_infracao" name="local_infracao" required><br><br>
                 <label for="descricao_infracao">Descrição da Infração:</label>
                 <textarea id="descricao_infracao" name="descricao_infracao" rows="4" cols="50" required></textarea><br><br>
-                <button type="submit">Cadastrar</button>
-                <button type="button" onclick="window.location.href='main.jsp'">Voltar</button>
+                <div class="button-container">
+                    <button type="submit">Cadastrar</button>
+                    <button type="button" onclick="window.location.href = 'main.jsp'">Voltar</button>
+                </div>
             </form>
             <!-- Exibir mensagem de sucesso -->
             <%
