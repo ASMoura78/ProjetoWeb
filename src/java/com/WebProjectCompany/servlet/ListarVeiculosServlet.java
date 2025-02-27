@@ -22,21 +22,42 @@ public class ListarVeiculosServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         List<String> veiculos = new ArrayList<>();
-
+        List<String> placas = new ArrayList<>();
+        List<String> motoristas = new ArrayList<>();
+        
         try (Connection conn = DatabaseConnection.getConnection()) {
             String sql = "SELECT modelo FROM cadastroveiculo";
+            String sqlPlacas = "SELECT placa FROM cadastromultas";
+            String sqlMotoristas = "SELECT nome FROM cadastromotorista";
+            
             PreparedStatement pst = conn.prepareStatement(sql);
+            PreparedStatement pstPlacas = conn.prepareStatement(sqlPlacas);
+            PreparedStatement pstMotoristas = conn.prepareStatement(sqlMotoristas);
+            
             ResultSet rs = pst.executeQuery();
+            ResultSet rsPlacas = pstPlacas.executeQuery();
+            ResultSet rsMotoristas = pstMotoristas.executeQuery();
 
             while (rs.next()) {
                 veiculos.add(rs.getString("modelo"));
             }
+            
+            while (rsPlacas.next()) {
+                placas.add(rsPlacas.getString("placa"));
+            }
 
+             while (rsMotoristas.next()) {
+                motoristas.add(rsMotoristas.getString("nome")); 
+            }
+             
             // Defina o atributo 'veiculos' na requisição
             request.setAttribute("veiculos", veiculos);
+            request.setAttribute("placas", placas);
+            request.setAttribute("motoristas", motoristas);
+            
             // Encaminhe para a página 'CadastroMultas.jsp'
             request.getRequestDispatcher("CadastroMultas.jsp").forward(request, response);
-
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

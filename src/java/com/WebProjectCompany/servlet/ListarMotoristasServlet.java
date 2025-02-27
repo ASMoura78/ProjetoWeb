@@ -20,21 +20,34 @@ public class ListarMotoristasServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
+        
+        List<String> veiculos = new ArrayList<>();
+        List<String> motoristas = new ArrayList<>();
+        
         try (Connection conn = DatabaseConnection.getConnection()) {
-            List<String> motoristas = new ArrayList<>();
-            String sql = "SELECT nome FROM cadastromotorista";
-            PreparedStatement pst = conn.prepareStatement(sql);
-            ResultSet rs = pst.executeQuery();
-            while (rs.next()) {
-                motoristas.add(rs.getString("nome"));
-            }
-            request.setAttribute("motoristas", motoristas);
+            String sqlVeiculos = "SELECT modelo FROM cadastroveiculo";
+            String sqlMotoristas = "SELECT nome FROM cadastromotorista"; 
+            PreparedStatement pstVeiculos = conn.prepareStatement(sqlVeiculos);
+            PreparedStatement pstMotoristas = conn.prepareStatement(sqlMotoristas);
 
+            ResultSet rsVeiculos = pstVeiculos.executeQuery();
+            ResultSet rsMotoristas = pstMotoristas.executeQuery();
+            
+            while (rsVeiculos.next()) {
+                veiculos.add(rsVeiculos.getString("modelo"));
+            }
+            
+            while (rsMotoristas.next()) {
+                motoristas.add(rsMotoristas.getString("nome")); 
+            }
+
+            request.setAttribute("veiculos", veiculos);
+            request.setAttribute("motoristas", motoristas);
             request.getRequestDispatcher("CadastroAtividade.jsp").forward(request, response);
+                       
         } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Erro ao carregar motoristas: " + e.getMessage());
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Erro ao carregar veículos ou motoristas: " + e.getMessage());
         }
     }
 
@@ -52,7 +65,7 @@ public class ListarMotoristasServlet extends HttpServlet {
 
     @Override
     public String getServletInfo() {
-        return "Servlet para listar motoristas";
+        return "Servlet para listar motoristas e veículos";
     }
 }
 

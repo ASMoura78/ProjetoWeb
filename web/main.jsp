@@ -48,6 +48,8 @@
                         Cadastro de Oficina
                     </button>
                 </form>
+            </div>
+            <div class="exit-container">
                 <form class="form-container" action="LogoutServlet" method="post">
                     <button type="submit">Sair</button>
                 </form>
@@ -55,6 +57,7 @@
         </div>
     </body>
 </html>
+
 
 
 

@@ -21,7 +21,8 @@ public class CadastrarAtividadeServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        String motorista = request.getParameter("motorista");
+        String nomeMotorista = request.getParameter("nome_motorista");
+        String veiculo = request.getParameter("veiculo");
         String destino = request.getParameter("destino");
         String dataSaida = request.getParameter("dataSaida");
         String dataChegada = request.getParameter("dataChegada");
@@ -30,21 +31,23 @@ public class CadastrarAtividadeServlet extends HttpServlet {
         String observacoes = request.getParameter("observacoes");
 
         try (Connection conn = DatabaseConnection.getConnection()) {
-            String sql = "INSERT INTO cadastroAtividade (motorista, destino, data_saida, data_chegada, quilometragem_saida, quilometragem_chegada, observacoes) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO cadastroAtividade (nome_motorista, veiculo, destino, data_horario_saida, data_horario_chegada, km_saida, km_chegada, observacoes) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pst = conn.prepareStatement(sql);
-            pst.setString(1, motorista);
-            pst.setString(2, destino);
-            pst.setString(3, dataSaida);
-            pst.setString(4, dataChegada);
-            pst.setString(5, quilometragemSaida);
-            pst.setString(6, quilometragemChegada);
-            pst.setString(7, observacoes);
+            pst.setString(1, nomeMotorista);
+            pst.setString(2, veiculo);
+            pst.setString(3, destino);
+            pst.setString(4, dataSaida);
+            pst.setString(5, dataChegada);
+            pst.setString(6, quilometragemSaida);
+            pst.setString(7, quilometragemChegada);
+            pst.setString(8, observacoes);
             pst.executeUpdate();
 
             request.setAttribute("message", "Atividade cadastrada com sucesso!");
 
+            // Obter a lista de motoristas
             List<String> motoristas = new ArrayList<>();
-            sql = "SELECT nome FROM motoristas";
+            sql = "SELECT nome FROM cadastromotorista";
             pst = conn.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
@@ -52,9 +55,21 @@ public class CadastrarAtividadeServlet extends HttpServlet {
             }
             request.setAttribute("motoristas", motoristas);
 
+            // Obter a lista de veículos
+            List<String> veiculos = new ArrayList<>();
+            sql = "SELECT modelo FROM cadastroveiculo";
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                veiculos.add(rs.getString("modelo"));
+            }
+            request.setAttribute("veiculos", veiculos);
+
             request.getRequestDispatcher("CadastroAtividade.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
+            request.setAttribute("errorMessage", "Erro ao carregar veículos: " + e.getMessage());
+            request.getRequestDispatcher("CadastroAtividade.jsp").forward(request, response);
         }
     }
 

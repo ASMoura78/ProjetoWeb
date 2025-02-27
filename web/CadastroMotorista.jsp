@@ -14,7 +14,14 @@
                 document.getElementById("categoria").value = "";
                 document.getElementById("cursos").value = "";
             }
-
+            // Função para formatar o CPF
+            function formatCPF(cpfField) {
+                let cpf = cpfField.value.replace(/\D/g, '');
+                cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+                cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+                cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+                cpfField.value = cpf;
+            }
             window.onload = function () {
             <% if (session.getAttribute("message") != null) { %>
                 clearForm(); // Limpar os campos do formulário
@@ -29,7 +36,7 @@
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required><br><br>
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" required><br><br>
+                <input type="text" id="cpf" name="cpf" oninput="formatCPF(this)" maxlength="14" required><br><br>
                 <label for="cnh">Número da CNH:</label>
                 <input type="text" id="cnh" name="cnh" required><br><br>
                 <label for="categoria">Categoria da CNH:</label>

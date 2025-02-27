@@ -16,14 +16,14 @@
                 }
             %>
             <form action="CadastrarAtividadeServlet" method="post">
-                <label for="motorista">Nome do Motorista:</label>
-                <select id="motorista" name="motorista" required>
+                <label for="nomeMotorista">Nome do Motorista:</label>
+                <select id="nomeMotorista" name="nome_motorista" required>
                     <option value="" disabled selected>Selecione o motorista</option>
                     <%
                         List<String> motoristas = (List<String>) request.getAttribute("motoristas");
                         if (motoristas != null) {
-                            for (String motorista : motoristas) {
-                                out.println("<option value='" + motorista + "'>" + motorista + "</option>");
+                            for (String nomeMotorista : motoristas) {
+                                out.println("<option value='" + nomeMotorista + "'>" + nomeMotorista + "</option>");
                             }
                         } else {
                             out.println("<option value='' disabled>Erro ao carregar motoristas</option>");
@@ -45,7 +45,6 @@
                         }
                     %>
                 </select><br><br>
-
                 <label for="destino">Destino:</label>
                 <input type="text" id="destino" name="destino" required><br><br>
                 <label for="dataSaida">Data e Horário de Saída:</label>
