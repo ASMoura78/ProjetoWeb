@@ -6,6 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cadastro de Atividade</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="cadastro-container">
@@ -30,7 +31,7 @@
                         }
                     %>
                 </select><br><br>
-                
+
                 <label for="veiculo">Veículo:</label>
                 <select id="veiculo" name="veiculo" required>
                     <option value="" disabled selected>Selecione o veículo</option>
@@ -59,9 +60,11 @@
                 <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
                 <div class="button-container">
                     <button type="submit">Cadastrar</button>
-                    <button type="button" onclick="window.location.href='main.jsp'">Voltar</button>
+                    <button type="button" onclick="window.location.href = 'main.jsp'">Voltar</button>
                 </div>
             </form>
+            <!-- Botão para alternar entre claro e escuro -->
+            <button type="button" onclick="toggleTheme()">Alternar Claro/Escuro</button>
             <!-- Exibir mensagem de sucesso -->
             <%
                 String message = (String) request.getAttribute("message");

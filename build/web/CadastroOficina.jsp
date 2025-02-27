@@ -6,6 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cadastro de Oficina</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="cadastro-container">
@@ -50,6 +51,8 @@
                     <button type="button" onclick="window.location.href = 'main.jsp'">Voltar</button>
                 </div>
             </form>
+            <!-- Botão para alternar entre claro e escuro -->
+            <button type="button" onclick="toggleTheme()">Alternar Claro/Escuro</button>
             <!-- Exibir mensagem de sucesso -->
             <%
                 String message = (String) request.getAttribute("message");

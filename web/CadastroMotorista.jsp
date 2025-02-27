@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cadastro de Motorista</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js" defer></script>
         <script type="text/javascript">
             // Função para limpar os campos do formulário
             function clearForm() {
@@ -55,6 +56,8 @@
                     <button type="button" onclick="window.location.href = 'main.jsp'">Voltar</button>
                 </div>
             </form>
+            <!-- Botão para alternar entre claro e escuro -->
+         <button type="button" onclick="toggleTheme()">Alternar Claro/Escuro</button>
 
             <!-- Exibir mensagem de sucesso -->
             <%

@@ -6,6 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cadastro de Multas</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="cadastro-container">
@@ -14,7 +15,7 @@
 
                 <label for="nome_motorista_infrator">Nome do Motorista Infrator:</label>
                 <select type="text" id="nome_motorista_infrator" name="nome_motorista_infrator" required>
-                <option value="" disabled selected>Selecione o motorista</option>
+                    <option value="" disabled selected>Selecione o motorista</option>
                     <%
                         List<String> motoristas = (List<String>) request.getAttribute("motoristas");
                         if (motoristas != null) {
@@ -26,9 +27,9 @@
                         }
                     %>
                 </select><br><br>
-                                                               
-                                            
-                        <label for="veiculo">Veículo:</label>
+
+
+                <label for="veiculo">Veículo:</label>
                 <select id="veiculo" name="veiculo" required>
                     <option value="" disabled selected>Selecione o veículo</option>
                     <%
@@ -68,6 +69,8 @@
                     <button type="button" onclick="window.location.href = 'main.jsp'">Voltar</button>
                 </div>
             </form>
+            <!-- Botão para alternar entre claro e escuro -->
+            <button type="button" onclick="toggleTheme()">Alternar Claro/Escuro</button>
             <!-- Exibir mensagem de sucesso -->
             <%
                 String message = (String) request.getAttribute("message");

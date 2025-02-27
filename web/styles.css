@@ -125,6 +125,40 @@ button img {
 .message.error {
     color: #FF6347;
 }
+/* Estilos comuns */
+body, .cadastro-container, .login-container, .message-container, input, select, textarea, button {
+    transition: background-color 0.3s, color 0.3s; /* Animação suave para transições */
+}
+
+/* Modo Claro */
+body.light-mode {
+    background-color: #f0f8ff;
+    color: #000000;
+}
+
+.cadastro-container.light-mode, .login-container.light-mode, .message-container.light-mode {
+    background-color: #ffffff;
+}
+
+.button-container.light-mode button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.cadastro-container.dark-mode, .login-container.dark-mode, .message-container.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.button-container.dark-mode button {
+    background-color: #333333;
+    color: white;
+}
 
 
 
