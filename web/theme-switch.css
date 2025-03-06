@@ -1,0 +1,90 @@
+/* theme-switch.css */
+.theme-switch-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.theme-switch-wrapper input {
+    display: none;
+}
+
+.theme-switch-wrapper .display {
+    width: 80px; /* Largura reduzida do botão */
+    height: 40px; /* Altura reduzida do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-switch-wrapper label {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    background: #F3F3F3;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.05) inset;
+    cursor: pointer;
+    position: relative;
+}
+
+.theme-switch-wrapper .circle {
+    width: 30px; /* Tamanho reduzido do círculo */
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05),
+                -3px -3px 8px rgba(0, 0, 0, 0.05) inset;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(10%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.theme-switch-wrapper svg {
+    width: 20px; /* Tamanho reduzido dos ícones */
+    position: absolute;
+}
+
+.theme-switch-wrapper .sun {
+    color: #FFD600;
+    margin-top: 0%;
+    opacity: 1;
+}
+
+.theme-switch-wrapper .moon {
+    margin-top: -150%;
+    color: white;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked + .display label {
+    background: #1F1F21;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5) inset;
+}
+
+input[type=checkbox]:checked + .display label .circle {
+    left: 100%;
+    transform: translate(-110%, -50%);
+    background: #2C2C2F;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5),
+                -3px -3px 8px rgba(0, 0, 0, 0.5) inset;
+}
+
+input[type=checkbox]:checked + .display label .circle .sun {
+    margin-top: 150%;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked + .display label .circle .moon {
+    margin-top: 0%;
+    opacity: 1;
+}
+
+label:active .circle {
+    width: 35px; /* Ajuste ao clicar */
+}
+

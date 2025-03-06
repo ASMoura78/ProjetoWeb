@@ -1,0 +1,68 @@
+/* dark-mode.css */
+
+/* Estilo básico do corpo no modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Estilo para containers principais no modo escuro */
+body.dark-mode .cadastro-container,
+body.dark-mode .login-container,
+body.dark-mode .message-container,
+body.dark-mode .main-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Estilo para cabeçalhos no modo escuro */
+body.dark-mode h2 {
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px #000; /* Sombra mais escura */
+}
+
+/* Estilo para labels no modo escuro */
+body.dark-mode label {
+    color: #ffffff;
+}
+
+/* Estilo para inputs, selects e textareas no modo escuro */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="password"],
+body.dark-mode textarea {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+/* Estilo para botões no modo escuro */
+body.dark-mode button {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+/* Estilo para hover em botões no modo escuro */
+body.dark-mode button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para mensagens no modo escuro */
+body.dark-mode .message {
+    text-shadow: 1px 1px 3px #000; /* Sombra mais escura */
+}
+
+/* Estilo para mensagens de sucesso no modo escuro */
+body.dark-mode .message.success {
+    color: #4CAF50;
+}
+
+/* Estilo para mensagens de erro no modo escuro */
+body.dark-mode .message.error {
+    color: #FF6347;
+}
+
+/* Estilo para links no modo escuro */
+body.dark-mode a {
+    color: #1e90ff;
+}
+

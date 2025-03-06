@@ -1,0 +1,157 @@
+/* Estilo básico do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    background-image: url('imagens/logistica.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remover margens padrão */
+}
+
+/* Estilo para containers principais */
+.cadastro-container, .login-container, .message-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+/* Estilo para containers main */
+.main-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200%;
+    max-width: 1000px; /* Aumentar largura máxima para centralizar */
+}
+
+/* Estilo para cabeçalhos */
+h2 {
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px #aaa; /* Adicionar sombra ao texto */
+}
+
+/* Estilo para labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333; /* Cor mais viva para o texto */
+}
+
+/* Estilo para inputs, selects e textareas */
+input, select, textarea {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Permitir redimensionamento vertical de textareas */
+textarea {
+    resize: vertical;
+}
+
+/* Alinhar contêiner de botões no centro */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centralizar botões horizontalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+    flex-wrap: nowrap; /* Manter os botões em uma única linha */
+    max-width: 100%; /* Ajuste conforme necessário */
+    margin-bottom: 20px; /* Espaçamento inferior para o botão "Sair" */
+}
+
+/* Estilos dos formulários dentro do contêiner dos botões */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para botões */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px #aaa; /* Adicionar sombra aos botões */
+    margin: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilo para hover em botões */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para imagens dentro dos botões */
+button img {
+    width: 80px;  /* Defina o tamanho da imagem conforme necessário */
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 5px; /* Espaço entre a imagem e o texto */
+}
+
+.bottom-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bottom-buttons button {
+    width: 7%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo para mensagens */
+.message {
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px #ccc; /* Adicionar sombra ao texto */
+}
+
+/* Estilo para mensagens de sucesso */
+.message.success {
+    color: #4CAF50;
+}
+
+/* Estilo para mensagens de erro */
+.message.error {
+    color: #FF6347;
+}
+/* Estilos comuns */
+body, .cadastro-container, .login-container, .message-container, input, select, textarea, button {
+    transition: background-color 0.3s, color 0.3s; /* Animação suave para transições */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
