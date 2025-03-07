@@ -21,33 +21,33 @@
             %>
             <div class="button-container">
                 <form class="form-container" action="CadastroMotorista.jsp" method="get">
-                    <button type="submit">
-                        <img src="imagens/motorista.jpg" alt="Cadastrar Motorista">
-                        Cadastrar Motorista
+                    <button type="submit" class="modern-button">
+                        <img src="imagens/motorista.jpg" alt="Cadastrar Motorista" class="button-image">
+                        <span class="button-text">Cadastrar Motorista</span>
                     </button>
                 </form>
                 <form class="form-container" action="CadastroVeiculo.jsp" method="get">
-                    <button type="submit">
-                        <img src="imagens/veiculo.jpg" alt="Cadastrar Veículo">
-                        Cadastrar Veículo
+                    <button type="submit" class="modern-button">
+                        <img src="imagens/veiculo.jpg" alt="Cadastrar Veículo" class="button-image">
+                        <span class="button-text">Cadastrar Veículo</span>
                     </button>
                 </form>
-                <form class="form-container" action="ListarMotoristasServlet" method="get"> <!-- Atualizado -->
-                    <button type="submit">
-                        <img src="imagens/atividade.jpg" alt="Cadastrar Atividade">
-                        Cadastrar Atividade
+                <form class="form-container" action="ListarMotoristasServlet" method="get">
+                    <button type="submit" class="modern-button">
+                        <img src="imagens/atividade.jpg" alt="Cadastrar Atividade" class="button-image">
+                        <span class="button-text">Cadastrar Atividade</span>
                     </button>
                 </form>
                 <form class="form-container" action="ListarVeiculosServlet" method="get">
-                    <button type="submit">
-                        <img src="imagens/multa.jpg" alt="Cadastro de Multas">
-                        Cadastro de Multas
+                    <button type="submit" class="modern-button">
+                        <img src="imagens/multa.jpg" alt="Cadastro de Multas" class="button-image">
+                        <span class="button-text">Cadastro de Multas</span>
                     </button>
                 </form>
                 <form class="form-container" action="ListarVeiculosOficinaServlet" method="get">
-                    <button type="submit">
-                        <img src="imagens/oficina.jpg" alt="Cadastro de Oficina">
-                        Cadastro de Oficina
+                    <button type="submit" class="modern-button">
+                        <img src="imagens/oficina.jpg" alt="Cadastro de Oficina" class="button-image">
+                        <span class="button-text">Cadastro de Oficina</span>
                     </button>
                 </form>
             </div>
@@ -76,6 +76,7 @@
         <script src="script.js"></script> <!-- Referência ao script externo -->
     </body>
 </html>
+
 
 
 

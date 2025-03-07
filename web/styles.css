@@ -94,29 +94,41 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Estilo para imagens dentro dos botões */
-button img {
-    width: 80px;  /* Defina o tamanho da imagem conforme necessário */
-    height: 80px;
-    vertical-align: middle;
-    margin-right: 5px; /* Espaço entre a imagem e o texto */
-}
-
-.bottom-buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.bottom-buttons button {
-    width: 7%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
+/* Estilo para botões modernos com imagem e texto abaixo */
+.modern-button {
+    background-color: #4CAF50; /* Cor vibrante */
     color: white;
-    cursor: pointer;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Coloca a imagem e o texto em coluna */
+    align-items: center; /* Alinha o conteúdo ao centro */
+    text-decoration: none;
+    border: none; /* Remove a borda padrão */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Efeitos de transição */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    width: 150px; /* Largura do botão */
+    height: 150px; /* Altura do botão */
+}
+
+.modern-button:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+/* Estilo para imagens dentro dos botões modernos */
+.button-image {
+    border-radius: 20%; /* Torna a imagem circular */
+    width: 90px; /* Tamanho da imagem */
+    height: 90px;
+    margin-bottom: 5px; /* Espaço entre a imagem e o texto */
+}
+
+/* Estilo para texto dentro dos botões modernos */
+.button-text {
+    font-size: 16px;
+    color: white;
 }
 
 /* Estilo para mensagens */
@@ -135,10 +147,12 @@ button img {
 .message.error {
     color: #FF6347;
 }
+
 /* Estilos comuns */
 body, .cadastro-container, .login-container, .message-container, input, select, textarea, button {
     transition: background-color 0.3s, color 0.3s; /* Animação suave para transições */
 }
+
 
 
 
